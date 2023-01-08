@@ -6,17 +6,19 @@ import { DataService } from 'src/app/shared/data.service';
   templateUrl: './climate.component.html',
   styleUrls: ['./climate.component.css'],
 })
-export class ClimateComponent implements OnInit {
+export class ClimateComponent {
   constructor(private data: DataService) {}
   temperature = '--';
-  src='br'
-  code='01d'
+  src = '';
+  isSrc = false;
+  code = '01d';
   name = '--';
   humidity = 0;
   wind = '--';
   max = '--'; //corrigir temp max e min idendtico temp atual
   min = '--';
   value = '';
+  country = '';
 
   searchCity(city: string) {
     this.data.getClimate(city).subscribe((iten) => {
@@ -30,11 +32,24 @@ export class ClimateComponent implements OnInit {
       this.min = temp_min.toString();
       this.name = iten.name;
       this.humidity = iten.main.humidity;
-      this.src=(iten.sys.country).toLowerCase()
+      this.src = iten.sys.country.toLowerCase();
       this.wind = speedWind.toFixed(0);
-      console.log(iten);
+      // console.log(iten);
+      this.returnName(this.src);
+      this.isSrc = true;
+    });
+  }
+  returnName(acronym: string) {
+    this.data.getCountry(acronym).subscribe((iten) => {
+      this.country = iten[0].altSpellings[1];
     });
   }
 
-  ngOnInit(): void {}
+  enterPress($event: any) {
+    if ($event.key === 'Enter') {
+      this.searchCity(this.value);
+    }
+    {
+    }
+  }
 }

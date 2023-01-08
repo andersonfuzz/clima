@@ -39,7 +39,9 @@ mat-card-content{
 .form-field {
   width: 200px;
 }
-
+.climaTempo{
+padding: 15px;
+}
 
 
 .btn-search{

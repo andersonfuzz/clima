@@ -15,4 +15,8 @@ export class DataService {
   getClimate(city:string):Observable<any>{
    return this.http.get<string[]>(`${this.url}${city}&appid=${this.appId}&lang=pt_br&units=metric`)
   }
+
+  getCountry(country:string):Observable<any>{
+    return this.http.get<string[]>(`https://restcountries.com/v3.1/alpha/${country}`)
+  }
 }

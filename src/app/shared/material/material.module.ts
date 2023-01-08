@@ -4,6 +4,7 @@ import {MatInputModule} from '@angular/material/input';
 import {MatIconModule} from '@angular/material/icon';
 import {MatButtonModule} from '@angular/material/button';
 import {MatToolbarModule} from '@angular/material/toolbar';
+import {MatSnackBarModule} from '@angular/material/snack-bar';
 
 
 
@@ -14,7 +15,8 @@ import {MatToolbarModule} from '@angular/material/toolbar';
     MatInputModule,
     MatIconModule,
     MatButtonModule,
-    MatToolbarModule
+    MatToolbarModule,
+    MatSnackBarModule
   ]
 })
 export class MaterialModule { }
