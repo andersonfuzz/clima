@@ -1,0 +1,41 @@
+<div class="container">
+  <mat-card>
+    <div class="div-container">
+      <mat-card-content class="mat-card-img">
+       <img src="https://flagcdn.com/w320/{{src}}.png"/>
+        <mat-card-title>{{temperature}}&deg;C</mat-card-title>
+      </mat-card-content>
+      <mat-card-content>
+        <mat-card-subtitle>Máxima: {{min}}&deg;C</mat-card-subtitle>
+        <mat-card-subtitle>Mínima: {{max}}&deg;C</mat-card-subtitle>
+        <mat-card-subtitle>Umidade relativa do ar: {{humidity}}%</mat-card-subtitle>
+      </mat-card-content>
+      <mat-card-content>
+        <mat-card-title>{{name}}</mat-card-title>
+        <img src="http://openweathermap.org/img/wn/{{code}}}.png">
+        <mat-card-subtitle>Velocidade do vento: {{wind}} km/h</mat-card-subtitle>
+      </mat-card-content>
+    </div>
+
+    <div class="div-container">
+      <mat-form-field class="form-field">
+        <mat-label>Localidade</mat-label>
+        <input matInput type="text" [(ngModel)]="value" />
+        <button
+          *ngIf="value"
+          matSuffix
+          mat-icon-button
+          aria-label="Clear"
+          (click)="value = ''"
+        >
+          <mat-icon>close</mat-icon>
+        </button>
+      </mat-form-field>
+      <button mat-flat-button color="primary" class="btn-search" (click)="searchCity(value)">
+        <mat-icon>search</mat-icon>
+        Procurar
+      </button>
+    </div>
+  </mat-card>
+</div>
+

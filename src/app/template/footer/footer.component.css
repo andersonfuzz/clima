@@ -1,0 +1,7 @@
+mat-toolbar{
+  height: 35px;
+  color:#000;
+  background-color: #ef96c5;
+  justify-content: end;
+  /* aparentemente com comportamento de flexbox */
+}

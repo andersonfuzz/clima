@@ -1,0 +1,9 @@
+/*
+.example-spacer {
+  flex: 1 1 auto;
+} */
+mat-toolbar{
+  height: 45px;
+  background-color: #ef96c5;
+  color:#000;
+}
