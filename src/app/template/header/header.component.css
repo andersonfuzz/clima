@@ -4,6 +4,7 @@
 } */
 mat-toolbar{
   height: 45px;
-  background-color: #ef96c5;
   color:#000;
+  background-color: #001E44;
+  color: #fff;
 }

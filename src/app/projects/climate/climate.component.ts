@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
 import { DataService } from 'src/app/shared/data.service';
 
 @Component({
@@ -10,7 +10,7 @@ export class ClimateComponent {
   constructor(private data: DataService) {}
   temperature = '--';
   src = '';
-  isSrc = false;
+  hideImg = false;
   code = '01d';
   name = '--';
   humidity = 0;
@@ -34,9 +34,8 @@ export class ClimateComponent {
       this.humidity = iten.main.humidity;
       this.src = iten.sys.country.toLowerCase();
       this.wind = speedWind.toFixed(0);
-      // console.log(iten);
       this.returnName(this.src);
-      this.isSrc = true;
+      this.hideImg = true;
     });
   }
   returnName(acronym: string) {
@@ -48,8 +47,6 @@ export class ClimateComponent {
   enterPress($event: any) {
     if ($event.key === 'Enter') {
       this.searchCity(this.value);
-    }
-    {
     }
   }
 }

@@ -3,8 +3,8 @@
     <mat-card-title class="climaTempo">ClimaTempo</mat-card-title>
     <div class="div-container">
       <mat-card-content class="mat-card-img">
-        <img *ngIf="isSrc" src="https://flagcdn.com/w320/{{ src }}.png" />
-        <mat-card-title *ngIf="isSrc">{{ temperature }}&deg;C</mat-card-title>
+        <img *ngIf="hideImg" src="https://flagcdn.com/w320/{{ src }}.png" />
+        <mat-card-title *ngIf="hideImg">{{ temperature }}&deg;C</mat-card-title>
       </mat-card-content>
       <mat-card-content>
         <mat-card-subtitle>Máxima: {{ min }}&deg;C</mat-card-subtitle>

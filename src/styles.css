@@ -5,3 +5,11 @@ html, body { height: 100%; }
 body { margin: 0; font-family: 'Ubuntu Condensed', sans-serif }
 
 
+.error{
+  color: #fff;
+  background-color: red;
+}
+.success{
+color:#fff;
+background-color: green;
+}

@@ -4,10 +4,12 @@
   justify-content: center;
   width: 98vw;
   height: 88.3vh;
+  background-image: linear-gradient(rgb(111, 140, 184),#fff ,rgb(9, 9, 53));
+  background-position: center;
+  background-size: cover;
 }
 mat-card{
-
-  background-image: linear-gradient(#ccfbff,#ef96c5);
+  background-image: linear-gradient(rgb(111, 140, 184),#fff ,rgb(9, 9, 53));
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -47,6 +49,7 @@ padding: 15px;
 .btn-search{
   margin-left: 20px;
   height: 40px;
+
 }
 
 
